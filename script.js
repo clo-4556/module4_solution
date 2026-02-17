@@ -20,7 +20,7 @@ Hello Larry
 Hello Paula
 Hello Laura
 Good Bye Jim
-
+*/
 // STEP 1:
 // Wrap the entire contents of script.js inside of an IIFE
 // See Lecture 52, part 2
@@ -54,6 +54,7 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
     // Bonus option - using reduce
     var greetingList = names.reduce(function(accumulator, name)
     { 
+        // make first letter lowercase so case does not matter
         var firstLetter = name.charAt(0).toLowerCase(); 
 
         //look at first letter and determine if 'j'
@@ -64,7 +65,7 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
         }
         return accumulator; 
     }, 
-    // need to initialize lists for the accumulator
+    // need to initialize lists for the accumulator 
     {
         hello: [], 
         bye: []
